@@ -10,11 +10,62 @@
                 <a href="contact.html">Contact</a>
             </nav>
         </header>
-        <article>
-            <h1>Contact Us!</h1>
-            <p>Have questions or want to commission an artwork? Reach out to us!</p>
-            <p>Email: crotatopotato@gmail.com</p>
-            <p>Twitter: @samsartcorner</p>
-        </article>
+        <h1>Sam's Art Corner</h1>
+        <p>For your imagination!</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        <p>Have a question? Send us a message!</p>
+
+        <form>
+
+            <fieldset>
+                <legend>Your details</legend>
+
+                <p>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="subject">Subject</label><br>
+                    <select id="subject" name="subject">
+                        <option value="product-question">Product question</option>
+                        <option value="order-status">Order status</option>
+                        <option value="custom-art">Custom art enquiry</option>
+                        <option value="wholesale">Wholesale enquiry</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" required></textarea>
+                </p>
+
+                <button type="submit">Send message</button>
+
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sam's Art Corner</p>
+    </footer>
     </body>
 </html>
