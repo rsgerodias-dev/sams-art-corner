@@ -18,5 +18,54 @@
                 </td>
             </tr>
         </table>
+        <form>
+        <h2>Order Enquiry</h2>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="20">
+
+        <fieldset>
+            <legend>Delivery Method</legend>
+
+            <label>
+                <input type="radio" name="delivery" value="delivery">
+                Home Delivery
+            </label>
+
+            <label>
+                <input type="radio" name="delivery" value="pickup">
+                Store Pickup
+            </label>
+
+            <label>
+                <input type="radio" name="delivery" value="meetup">
+                Meet-up
+            </label>
+        </fieldset>
+
+        <p>Optional Extras:</p>
+
+        <label>
+            <input type="checkbox" name="extras" value="gift-wrapping">
+            Gift Wrapping
+        </label>
+
+        <label>
+            <input type="checkbox" name="extras" value="express-handling">
+            Express Handling
+        </label>
+
+        <label>
+            <input type="checkbox" name="extras" value="thank-you-card">
+            Thank-you Card
+        </label>
+
+        <br><br>
+
+        <label for="email">Contact Email:</label>
+            <input type="email" id="email" name="email" required>
+
+        <button type="submit">Send Order Enquiry</button>
+    </form>
     </body>
 </html>
