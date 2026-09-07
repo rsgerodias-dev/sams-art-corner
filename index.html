@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <header>
-            <h1>Sam's Art Corner</h1>
-            <p>For your imagination!</p>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <section></section>
-            <article>
+<body>
+
+    <!-- Layout: Header and Navigation -->
+    <header>
+        <h1>Sam's Art Corner</h1>
+        <p>For your imagination!</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Layout: Main Content -->
+    <main>
+        <section>
+            
+            <!-- Component: Product Card -->
+            <article class="product-card">
                 <h3>Sketch</h3>
                 <p>500 PHP</p>
                 <p>A sketch base drawing of your character/oc!</p>
                 <img src="art2.png" width="300" alt="What a sketch would look like.">
-                <p></p> <a href="products/sketch.html">View details</a>
+                <p><a href="products/sketch.html">View details</a></p>
             </article>
-            <article>
+
+            <!-- Component: Product Card -->
+            <article class="product-card">
                 <h3>Colored</h3>
                 <p>1000 PHP</p>
                 <p>A colored base of your character/oc!</p>
                 <img src="art3.jpg" width="300" alt="What a colored sketch would look like.">
                 <p><a href="products/colored.html">View details</a></p>
             </article>
-            <article>
+
+            <!-- Component: Product Card -->
+            <article class="product-card">
                 <h3>Full/rendered Art</h3>
                 <p>1500 PHP</p>
                 <p>A full/rendered art of your character/oc!</p>
                 <img src="art4.png" width="300" alt="What a full/rendered art would look like.">
+                <p><a href="products/full.html">View details</a></p>
             </article>
+
         </section>
-    </body>
+    </main>
+
+    <!-- Layout: Footer -->
+    <footer>
+        <p>&copy; 2026 Sam's Art Corner</p>
+    </footer>
+
+</body>
 </html>
