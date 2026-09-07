@@ -3,9 +3,9 @@
 ========================= */
 
 :root {
-    --brand-color: #8b5e83;
+    --brand: #8b5e83;
     --dark-ink: #222222;
-    --muted-grey: #777777;
+    --muted-grey: #555555;
     --light-background: #f5f2f5;
 }
 
@@ -32,7 +32,7 @@ body {
 ========================= */
 
 header {
-    background-color: var(--brand-color);
+    background-color: var(--brand);
     color: white;
     text-align: center;
     padding: 30px 20px 20px;
@@ -42,13 +42,6 @@ header h1 {
     margin: 0;
 }
 
-header p {
-    margin: 5px 0 20px;
-}
-
-
-/* Navigation */
-
 nav {
     background-color: var(--dark-ink);
     padding: 10px;
@@ -71,11 +64,8 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--brand-color);
+    color: var(--brand);
 }
-
-
-/* Main content */
 
 main {
     max-width: 1000px;
@@ -83,40 +73,37 @@ main {
     padding: 30px 20px;
 }
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-
-/* Footer */
-
 footer {
     background-color: var(--dark-ink);
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
 }
 
 
 /* =========================
-   4. COMPONENTS
+   4. PRODUCT CARDS
 ========================= */
 
-/* Product cards */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
 .product-card {
     background-color: white;
-    border: 1px solid var(--muted-grey);
     border-radius: 8px;
+    border-left: 6px solid var(--brand);
     padding: 20px;
-    flex: 1 1 280px;
+    margin-bottom: 20px;
+    width: 300px;
 }
 
 .product-card h3 {
-    color: var(--brand-color);
+    font-size: 24px;
+    color: var(--brand);
     margin-top: 0;
 }
 
@@ -124,11 +111,11 @@ footer {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 15px 0;
+    margin: 15px auto;
 }
 
 .product-card a {
-    color: var(--brand-color);
+    color: var(--brand);
     font-weight: bold;
     text-decoration: none;
 }
@@ -136,174 +123,61 @@ footer {
 .product-card a:hover {
     text-decoration: underline;
 }
-/* =========================
-   1. VARIABLES
-========================= */
-
-:root {
-    --brand-color: #8b5e83;
-    --dark-ink: #222222;
-    --muted-grey: #777777;
-    --light-background: #f5f2f5;
-}
 
 
 /* =========================
-   2. BASE STYLES
-========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-ink);
-    background-color: var(--light-background);
-    margin: 0;
-    padding: 30px;
-}
-
-
-/* =========================
-   3. LAYOUT REGIONS
-========================= */
-
-header {
-    background-color: var(--brand-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: var(--dark-ink);
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--brand-color);
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-footer {
-    background-color: var(--dark-ink);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-
-/* =========================
-   4. PRODUCT DETAILS
-========================= */
-
-table {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    background-color: white;
-    border-collapse: collapse;
-    border: 1px solid var(--muted-grey);
-}
-
-th {
-    background-color: var(--brand-color);
-    color: white;
-    padding: 15px;
-}
-
-th h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-td {
-    padding: 20px;
-}
-
-td img {
-    max-width: 100%;
-    height: auto;
-}
-
-td p {
-    margin: 10px 0;
-}
-
-
-/* =========================
-   5. ORDER FORM
+   5. CONTACT FORM
 ========================= */
 
 form {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 30px auto;
     background-color: white;
     padding: 25px;
-    border: 1px solid var(--muted-grey);
     border-radius: 8px;
 }
 
-form h2 {
-    color: var(--brand-color);
-    margin-top: 0;
-}
-
-label {
-    display: inline-block;
-    margin: 8px 10px 8px 0;
-}
-
-input[type="number"],
-input[type="email"] {
-    padding: 8px;
-    border: 1px solid var(--muted-grey);
-    border-radius: 4px;
-}
-
 fieldset {
-    margin: 20px 0;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid var(--muted-grey);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 legend {
+    color: var(--brand);
     font-weight: bold;
-    color: var(--brand-color);
+    padding: 0 8px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid var(--muted-grey);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
 }
 
 button {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: var(--brand-color);
+    background-color: var(--brand);
     color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
