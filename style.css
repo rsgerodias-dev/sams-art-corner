@@ -103,14 +103,13 @@ footer {
 
 
 /* =========================
-   6. PRODUCT CARDS
+   6. PRODUCT GRID
 ========================= */
 
-section {
+.product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .product-card {
@@ -118,8 +117,7 @@ section {
     border-radius: 8px;
     border-left: 6px solid var(--brand);
     padding: 20px;
-    margin-bottom: 20px;
-    width: 300px;
+    flex: 1 1 240px;
 }
 
 .product-card h3 {
