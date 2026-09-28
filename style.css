@@ -1,3 +1,4 @@
+
 /* =========================
    1. VARIABLES
 ========================= */
@@ -28,7 +29,43 @@ body {
 
 
 /* =========================
-   3. FLEXBOX HEADER
+   3. PAGE GRID
+========================= */
+
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side main"
+        "foot foot";
+    gap: 16px;
+}
+
+
+/* =========================
+   4. GRID AREAS
+========================= */
+
+.site-header {
+    grid-area: masthead;
+}
+
+aside {
+    grid-area: side;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+}
+
+
+/* =========================
+   5. FLEXBOX HEADER
 ========================= */
 
 .site-header {
@@ -57,7 +94,7 @@ body {
 }
 
 .site-header nav li {
-    /* Flexbox replaces display: inline-block */
+    /* Flexbox handles the layout */
 }
 
 .site-header nav a {
@@ -72,7 +109,27 @@ body {
 
 
 /* =========================
-   4. CENTERED SECTION
+   6. SIDEBAR
+========================= */
+
+aside {
+    background-color: white;
+    padding: 20px;
+    border-left: 6px solid var(--brand);
+}
+
+aside h2,
+aside h3 {
+    color: var(--brand);
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   7. CENTRED SECTION
 ========================= */
 
 .shop-banner {
@@ -85,14 +142,17 @@ body {
 
 
 /* =========================
-   5. LAYOUT REGIONS
+   8. MAIN CONTENT
 ========================= */
 
 main {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 30px 20px;
 }
+
+
+/* =========================
+   9. FOOTER
+========================= */
 
 footer {
     background-color: var(--dark-ink);
@@ -103,7 +163,7 @@ footer {
 
 
 /* =========================
-   6. PRODUCT GRID
+   10. PRODUCT GRID
 ========================= */
 
 .product-grid {
@@ -112,12 +172,17 @@ footer {
     gap: 24px;
 }
 
+
+/* =========================
+   11. PRODUCT CARDS
+========================= */
+
 .product-card {
+    flex: 1 1 240px;
     background-color: white;
     border-radius: 8px;
     border-left: 6px solid var(--brand);
     padding: 20px;
-    flex: 1 1 240px;
 }
 
 .product-card h3 {
@@ -145,7 +210,7 @@ footer {
 
 
 /* =========================
-   7. CONTACT FORM
+   12. CONTACT FORM
 ========================= */
 
 form {
@@ -183,11 +248,21 @@ textarea {
     resize: vertical;
 }
 
+
+/* =========================
+   13. FOCUS STATE
+========================= */
+
 input:focus,
 textarea:focus {
     outline: 3px solid var(--brand);
     outline-offset: 2px;
 }
+
+
+/* =========================
+   14. SUBMIT BUTTON
+========================= */
 
 button {
     background-color: var(--brand);
