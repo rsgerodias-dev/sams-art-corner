@@ -1,4 +1,3 @@
-
 /* =========================
    1. VARIABLES
 ========================= */
@@ -29,16 +28,17 @@ body {
 
 
 /* =========================
-   3. PAGE GRID
+   3. MOBILE-FIRST PAGE GRID
 ========================= */
 
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side main"
-        "foot foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
 }
 
@@ -74,7 +74,7 @@ footer {
     align-items: center;
     background-color: var(--brand);
     color: white;
-    padding: 25px 40px;
+    padding: 25px 20px;
 }
 
 .site-header h1 {
@@ -91,10 +91,6 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.site-header nav li {
-    /* Flexbox handles the layout */
 }
 
 .site-header nav a {
@@ -277,3 +273,45 @@ button {
 button:hover {
     background-color: var(--dark-ink);
 }
+
+
+/* =========================
+   15. TABLET AND UP
+========================= */
+
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side main"
+            "foot foot";
+    }
+
+    .site-header {
+        padding: 25px 40px;
+    }
+}
+Add this to EVERY page
+
+Inside <head>, make sure you have:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+For example:
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Art Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+For your product pages:
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch - Sam's Art Corner</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
