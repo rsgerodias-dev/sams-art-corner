@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Art Corner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Layout: Header and Navigation -->
     <header class="site-header">
-        <h1>Sam's Art Corner</h1>
+        <h1 id="shop-name">Sam's Art Corner</h1>
 
         <nav>
             <ul>
@@ -18,44 +20,45 @@
         </nav>
     </header>
 
-    <!-- Layout: Main Content -->
     <main>
         <section>
-            
-            <!-- Component: Product Card -->
-            <article class="product-card">
-                <h3>Sketch</h3>
-                <p>500 PHP</p>
-                <p>A sketch base drawing of your character/oc!</p>
-                <img src="art2.png" width="300" alt="What a sketch would look like.">
-                <p><a href="products/sketch.html">View details</a></p>
-            </article>
+            <h2>Our Art Products</h2>
+            <p>For your imagination!</p>
 
-            <!-- Component: Product Card -->
-            <article class="product-card">
-                <h3>Colored</h3>
-                <p>1000 PHP</p>
-                <p>A colored base of your character/oc!</p>
-                <img src="art3.jpg" width="300" alt="What a colored sketch would look like.">
-                <p><a href="products/colored.html">View details</a></p>
-            </article>
+            <div class="product-grid">
+                <article class="product-card">
+                    <h3>Sketch</h3>
+                    <p>500 PHP</p>
+                    <p>A sketch base drawing of your character/oc!</p>
+                    <img src="art2.png" width="300" alt="Example of a sketch">
+                    <p><a href="products/sketch.html">View details</a></p>
+                </article>
 
-            <!-- Component: Product Card -->
-            <article class="product-card">
-                <h3>Full/rendered Art</h3>
-                <p>1500 PHP</p>
-                <p>A full/rendered art of your character/oc!</p>
-                <img src="art4.png" width="300" alt="What a full/rendered art would look like.">
-                <p><a href="products/full.html">View details</a></p>
-            </article>
+                <article class="product-card">
+                    <h3>Colored</h3>
+                    <p>1000 PHP</p>
+                    <p>A colored base of your character/oc!</p>
+                    <img src="art3.jpg" width="300" alt="Example of colored art">
+                    <p><a href="products/colored.html">View details</a></p>
+                </article>
 
+                <article class="product-card">
+                    <h3>Full/rendered Art</h3>
+                    <p>1500 PHP</p>
+                    <p>A full/rendered art of your character/oc!</p>
+                    <img src="art4.png" width="300" alt="Example of full rendered art">
+                    <p><a href="products/full.html">View details</a></p>
+                </article>
+            </div>
+
+            <p id="product-total"></p>
         </section>
     </main>
 
-    <!-- Layout: Footer -->
     <footer>
-        <p>&copy; 2026 Sam's Art Corner</p>
+        <p id="copyright">&copy; 2026 Sam's Art Corner</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

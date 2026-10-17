@@ -1,16 +1,34 @@
-<html>
-    <body>
-    <head>
-        <link rel="stylesheet" href="../style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch - Sam's Art Corner</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 id="shop-name">Sam's Art Corner</h1>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
         <table>
             <tr>
-                <th><h1>Sketch of your oc/character</h1></th>
+                <th><h2>Sketch of your oc/character</h2></th>
             </tr>
             <tr>
                 <td>
                     <p align="center">
-                        <img src="art2.png" width="300" alt="What a sketch would look like.">
+                        <img src="../art2.png" width="300" alt="Example of a sketch">
                     </p>
                 </td>
             </tr>
@@ -21,54 +39,62 @@
                 </td>
             </tr>
         </table>
+
         <form>
-        <h2>Order Enquiry</h2>
+            <h2>Order Enquiry</h2>
 
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="20">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" required>
 
-        <fieldset>
-            <legend>Delivery Method</legend>
+            <fieldset>
+                <legend>Delivery Method</legend>
+
+                <label>
+                    <input type="radio" name="delivery" value="delivery" required>
+                    Home Delivery
+                </label>
+
+                <label>
+                    <input type="radio" name="delivery" value="pickup">
+                    Store Pickup
+                </label>
+
+                <label>
+                    <input type="radio" name="delivery" value="meetup">
+                    Meet-up
+                </label>
+            </fieldset>
+
+            <p>Optional Extras:</p>
 
             <label>
-                <input type="radio" name="delivery" value="delivery">
-                Home Delivery
+                <input type="checkbox" name="extras" value="gift-wrapping">
+                Gift Wrapping
             </label>
 
             <label>
-                <input type="radio" name="delivery" value="pickup">
-                Store Pickup
+                <input type="checkbox" name="extras" value="express-handling">
+                Express Handling
             </label>
 
             <label>
-                <input type="radio" name="delivery" value="meetup">
-                Meet-up
+                <input type="checkbox" name="extras" value="thank-you-card">
+                Thank-you Card
             </label>
-        </fieldset>
 
-        <p>Optional Extras:</p>
+            <p>
+                <label for="email">Contact Email:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
 
-        <label>
-            <input type="checkbox" name="extras" value="gift-wrapping">
-            Gift Wrapping
-        </label>
+            <button type="submit">Send Order Enquiry</button>
+        </form>
+    </main>
 
-        <label>
-            <input type="checkbox" name="extras" value="express-handling">
-            Express Handling
-        </label>
+    <footer>
+        <p id="copyright">&copy; 2026 Sam's Art Corner</p>
+    </footer>
 
-        <label>
-            <input type="checkbox" name="extras" value="thank-you-card">
-            Thank-you Card
-        </label>
-
-        <br><br>
-
-        <label for="email">Contact Email:</label>
-            <input type="email" id="email" name="email" required>
-
-        <button type="submit">Send Order Enquiry</button>
-    </form>
-    </body>
+    <script src="../script.js"></script>
+</body>
 </html>
